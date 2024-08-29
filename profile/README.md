@@ -4,7 +4,7 @@ Welcome to the Expleo Group E-Learning Platform GitHub organization! This reposi
 
 ## Project Overview
 
-The Expleo Group E-Learning Platform is a comprehensive system aimed at enhancing the learning experience within our organization. It provides a structured environment for course management, user management, and learning progress tracking.
+The Expleo Group E-Learning Platform is a comprehensive system aimed at enhancing the learning experience within our organization. It provides a structured environment for course management, user management, certificate management, authentication service and learning progress tracking.
 
 ### Key Features
 
@@ -13,7 +13,7 @@ The Expleo Group E-Learning Platform is a comprehensive system aimed at enhancin
 - **Role-Based Access Control:** Ensures secure and appropriate access to different sections of the platform. The roles include:
   - **Master:** Full access, including user and course management.
   - **Admin:** Access to course management and administrative functions.
-  - **User:** Access to view and enroll in courses.
+  - **User:** Access to view courses and submitting their certificates.
 
 ## Repository Structure
 
@@ -21,8 +21,10 @@ This GitHub organization contains multiple repositories, each dedicated to a spe
 - **Auth Service:** Handles authentication and authorization, including JWT management.
 - **Course Service:** Manages the creation, updating, and deletion of courses.
 - **User Service:** Manages user accounts and their respective roles.
+- **Certificate Service:** Manages the creation of certificates, this service communicates with User service asynchronously and synchronously for different purposes.
 - **API Gateway:** Serves as the entry point to the platform, routing requests to the appropriate services.
-- **UI/UX Frontend:** The Angular-based user interface for the platform.
+- **Discovery Service:** Implements service discovery using Netflix Eureka, enabling microservices to register themselves and discover other services.
+- **UI/UX Frontend:** The Angular-based user interface for the platform with responsive design and a well done dashboard.
 
 ## Getting Started
 
@@ -33,12 +35,5 @@ To get started with developing or deploying this platform, follow the steps belo
 - **Java 17** or later
 - **Spring Boot 3.x**
 - **Angular 17** or later
-- **MongoDB** for the database
-- **Docker** for containerization (optional)
+- **MongoDB** and **MySQL** for the database
 - **Keycloak** for identity and access management
-
-### Installation
-
-1. Clone the relevant repository:
-   ```bash
-   git clone https://github.com/Expleo-group-elearn/frontend.git
